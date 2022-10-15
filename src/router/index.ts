@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, type RouteRecordRaw, type Router } from "vue-router";
+import { createRouter, createWebHistory, type Router, type RouteRecordRaw } from "vue-router";
 
 import { ExplorerView, HomeView } from "@views";
 

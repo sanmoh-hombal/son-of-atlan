@@ -1,5 +1,5 @@
-import { defineConfig, type ServerOptions, type UserConfigExport } from "vite";
 import path from "node:path";
+import { defineConfig, type ServerOptions, type UserConfigExport } from "vite";
 
 import vue from "@vitejs/plugin-vue";
 
