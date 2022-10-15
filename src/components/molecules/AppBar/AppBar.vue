@@ -8,7 +8,7 @@ import { CONSTANTS } from "@lib";
   <a-page-header
     title="Son of Atlan"
     :avatar="{ src: 'https://www.kindpng.com/picc/m/386-3861419_data-science-icon-png-transparent-png.png' }"
-    style="border-bottom: 1px solid rgb(235, 237, 240)">
+    style="background-color: #ffffff">
     <template #extra>
       <a-button :href="CONSTANTS.NOTION_URL" target="_blank">
         <template #icon>
