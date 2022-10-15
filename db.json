@@ -1,0 +1,18 @@
+{
+  "tabless": [
+    {"name": "categories", "query": "SELECT * FROM categories;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/categories.csv" },
+    {"name": "customers", "query": "SELECT * FROM customers;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/customers.csv" },
+    {"name": "employee_territories", "query": "SELECT * FROM employee_territories;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/employee_territories.csv" },
+    {"name": "employees", "query": "SELECT * FROM employees;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/employees.csv" },
+    {"name": "order_details", "query": "SELECT * FROM order_details;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/order_details.csv" },
+    {"name": "orders", "query": "SELECT * FROM orders;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/orders.csv" },
+    {"name": "products", "query": "SELECT * FROM products;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/products.csv" },
+    {"name": "regions", "query": "SELECT * FROM regions;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/regions.csv" },
+    {"name": "shippers", "query": "SELECT * FROM shippers;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/shippers.csv" },
+    {"name": "suppliers", "query": "SELECT * FROM suppliers;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/suppliers.csv" },
+    {"name": "territories", "query": "SELECT * FROM territories;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/territories.csv" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
