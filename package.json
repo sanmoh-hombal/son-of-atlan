@@ -1,0 +1,19 @@
+{
+  "name": "son-of-atlan",
+  "version": "0.0.0",
+  "description": "A Simple Dummy Data Fetch Application to show off some UI skills :-P",
+  "main": "index.js",
+  "repository": "https://github.com/sanmoh-hombal/son-of-atlan",
+  "author": "Sanmoh Hombal <sanmoh.hombal@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "commitizen": "^4.2.5",
+    "cz-emoji-conventional": "^1.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-emoji-conventional"
+    }
+  }
+}
