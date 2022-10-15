@@ -16,6 +16,7 @@ const config: UserConfigExport = defineConfig({
   resolve: {
     alias: [
       { find: "@", replacement: path.resolve(__dirname, "/src") },
+      { find: "@components", replacement: path.resolve(__dirname, "/src/components") },
       { find: "@router", replacement: path.resolve(__dirname, "/src/router") },
       { find: "@views", replacement: path.resolve(__dirname, "/src/views") },
     ],
