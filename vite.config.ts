@@ -14,7 +14,11 @@ const serverOptions: ServerOptions = {
 const config: UserConfigExport = defineConfig({
   plugins: [vue()],
   resolve: {
-    alias: [{ find: "@", replacement: path.resolve(__dirname, "/src") }],
+    alias: [
+      { find: "@", replacement: path.resolve(__dirname, "/src") },
+      { find: "@router", replacement: path.resolve(__dirname, "/src/router") },
+      { find: "@views", replacement: path.resolve(__dirname, "/src/views") },
+    ],
   },
   server: serverOptions,
   preview: serverOptions,
