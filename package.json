@@ -9,6 +9,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "test:unit": "vitest --environment jsdom",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
