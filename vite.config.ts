@@ -8,11 +8,11 @@ const serverOptions: ServerOptions = {
   host: true,
   open: true,
   cors: true,
-  strictPort: true
+  strictPort: true,
 };
 
 const config: UserConfigExport = defineConfig({
-  plugins: [vue(),],
+  plugins: [vue()],
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "/src") }],
   },
