@@ -9,6 +9,7 @@
       "@components/*": ["./src/components/*"],
       "@lib": ["./src/lib"],
       "@router": ["./src/router"],
+      "@services": ["./src/services"],
       "@views": ["./src/views"]
     }
   }

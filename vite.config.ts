@@ -19,6 +19,7 @@ const config: UserConfigExport = defineConfig({
       { find: "@components", replacement: path.resolve(__dirname, "/src/components") },
       { find: "@lib", replacement: path.resolve(__dirname, "/src/lib") },
       { find: "@router", replacement: path.resolve(__dirname, "/src/router") },
+      { find: "@services", replacement: path.resolve(__dirname, "/src/services") },
       { find: "@views", replacement: path.resolve(__dirname, "/src/views") },
     ],
   },
