@@ -7,6 +7,7 @@
     "paths": {
       "@*": ["./src/*"],
       "@components/*": ["./src/components/*"],
+      "@lib": ["./src/lib"],
       "@router": ["./src/router"],
       "@views": ["./src/views"]
     }
