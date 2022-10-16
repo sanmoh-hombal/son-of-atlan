@@ -1,3 +1,4 @@
+import * as ResultsService from "@services/results";
 import * as TablesService from "@services/tables";
 
-export { TablesService };
+export { ResultsService, TablesService };
