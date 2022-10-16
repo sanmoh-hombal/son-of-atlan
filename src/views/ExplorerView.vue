@@ -5,6 +5,7 @@ import { EditorPane } from "@components/organisms";
 import { CONSTANTS } from "@lib";
 import { ResultsService } from "@services";
 import { useTableStore } from "@store";
+import ResultPane from "../components/organisms/ResultPane/ResultPane.vue";
 
 export interface IExplorerViewProps {
   name: string;
@@ -33,5 +34,8 @@ watch(
 </script>
 
 <template>
-  <editor-pane @run="refresh" />
+  <div style="display: flex; flex-direction: column; height: 100%">
+    <editor-pane @run="refresh" />
+    <result-pane />
+  </div>
 </template>
