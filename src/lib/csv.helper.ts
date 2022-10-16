@@ -3,6 +3,16 @@ import _ from "lodash";
 const LINE_SEPARATOR: string = "\n";
 
 /**
+ * If the value is null, "null", "NULL", or an empty string, return "", otherwise return the value
+ *
+ * @param {string} value - The value to check if it's null.
+ * @return {string} a string or empty string if null.
+ */
+function nullify(value: string): string {
+  return ["NULL", "null", null, ""].includes(value) ? "" : value;
+}
+
+/**
  * Use common line separator, which parses each line as the contents of a JSON array
  *
  * @param {string} line - The line of text to parse.
@@ -28,7 +38,7 @@ function parseToObjects(csv: string): Record<string, any>[] {
 
   // Create objects from parsing lines. There will be as much objects as lines
   const objects = lines.map((line: string) =>
-    parseLine(line).reduce((object, value, index) => ({ ...object, [headers[index]]: value }), {})
+    parseLine(line).reduce((object, value, index) => ({ ...object, [headers[index]]: nullify(value) }), {})
   );
 
   return objects;
@@ -48,7 +58,9 @@ function parseToStrings(csv: string): string[][] {
   return csv
     .split(LINE_SEPARATOR)
     .map((line: string, index: number): string[] =>
-      index === 0 ? parseLine(line).map((item: string) => _.snakeCase(item)) : parseLine(line)
+      index === 0
+        ? parseLine(line).map((item: string) => _.snakeCase(item))
+        : parseLine(line).map((cell: string) => nullify(cell))
     );
 }
 
