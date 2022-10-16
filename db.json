@@ -1,17 +1,72 @@
 {
   "tabless": [
-    {"name": "categories", "query": "SELECT * FROM categories;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/categories.csv" },
-    {"name": "customers", "query": "SELECT * FROM customers;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/customers.csv" },
-    {"name": "employee_territories", "query": "SELECT * FROM employee_territories;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/employee_territories.csv" },
-    {"name": "employees", "query": "SELECT * FROM employees;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/employees.csv" },
-    {"name": "order_details", "query": "SELECT * FROM order_details;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/order_details.csv" },
-    {"name": "orders", "query": "SELECT * FROM orders;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/orders.csv" },
-    {"name": "products", "query": "SELECT * FROM products;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/products.csv" },
-    {"name": "regions", "query": "SELECT * FROM regions;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/regions.csv" },
-    {"name": "shippers", "query": "SELECT * FROM shippers;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/shippers.csv" },
-    {"name": "suppliers", "query": "SELECT * FROM suppliers;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/suppliers.csv" },
-    {"name": "territories", "query": "SELECT * FROM territories;", "data_url": "https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/territories.csv" }
-  ],
+    {
+      "id":"a6b8c4e9-d46e-4122-90b4-2fdcab2c859d",
+      "name":"categories",
+      "query":"SELECT * FROM categories;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/categories.csv"
+    },
+    {
+      "id":"19f63455-5a99-48fe-9446-8396bffd77e7",
+      "name":"customers",
+      "query":"SELECT * FROM customers;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/customers.csv"
+    },
+    {
+      "id":"c4d00e85-f237-4610-8b6d-a054bc50ca11",
+      "name":"employee_territories",
+      "query":"SELECT * FROM employee_territories;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/employee_territories.csv"
+    },
+    {
+      "id":"2c64e297-f287-40d7-b884-18f6491a598a",
+      "name":"employees",
+      "query":"SELECT * FROM employees;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/employees.csv"
+    },
+    {
+      "id":"83b0a25e-9a52-496d-b333-9ca9239e2186",
+      "name":"order_details",
+      "query":"SELECT * FROM order_details;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/order_details.csv"
+    },
+    {
+      "id":"4bf85166-9acd-4c48-9135-a0e5b491c8b3",
+      "name":"orders",
+      "query":"SELECT * FROM orders;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/orders.csv"
+    },
+    {
+      "id":"5c66e6f3-0dbb-456b-aeee-97cef28c570a",
+      "name":"products",
+      "query":"SELECT * FROM products;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/products.csv"
+    },
+    {
+      "id":"81757286-49ad-467e-aebe-a2ea1a61a0ff",
+      "name":"regions",
+      "query":"SELECT * FROM regions;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/regions.csv"
+    },
+    {
+      "id":"edb0ace3-67eb-4ab8-91ff-d44654ba0ea1",
+      "name":"shippers",
+      "query":"SELECT * FROM shippers;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/shippers.csv"
+    },
+    {
+      "id":"aa2c4c43-926a-47a7-aca7-070c18202485",
+      "name":"suppliers",
+      "query":"SELECT * FROM suppliers;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/suppliers.csv"
+    },
+    {
+      "id":"b140c5a8-ba55-478b-8547-0630f96b6d7c",
+      "name":"territories",
+      "query":"SELECT * FROM territories;",
+      "data_url":"https://raw.githubusercontent.com/graphql-compose/graphql-compose-examples/master/examples/northwind/data/csv/territories.csv"
+    }
+  ] ,
   "profile": {
     "name": "typicode"
   }
