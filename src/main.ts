@@ -12,11 +12,12 @@ import "ant-design-vue/dist/antd.css";
 const pinia: Pinia = createPinia();
 const app: VueApp<Element> = createApp(App);
 
-app.use(router);
 app.use(pinia);
-app.use(Antd);
 
 const tablesStore = useTablesStore();
-tablesStore.refreshTables();
+await tablesStore.refreshTables();
+
+app.use(router);
+app.use(Antd);
 
 app.mount("#app");
