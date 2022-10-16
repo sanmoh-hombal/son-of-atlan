@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { onMounted, provide, ref, watch } from "vue";
 
-import { EditorPane } from "@components/organisms";
+import { EditorPane, ResultPane } from "@components/organisms";
 import { CONSTANTS } from "@lib";
 import { ResultsService } from "@services";
 import { useTableStore } from "@store";
-import ResultPane from "../components/organisms/ResultPane/ResultPane.vue";
 
 export interface IExplorerViewProps {
   name: string;
