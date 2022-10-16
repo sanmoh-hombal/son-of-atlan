@@ -5,6 +5,7 @@ import { CONSTANTS } from "@lib";
 const http: AxiosInstance = axios.create({ baseURL: CONSTANTS.TYPICODE_API_URL, timeout: 10000 });
 
 export interface ITable {
+  id: string;
   name: string;
   query: string;
   data_url: string;
