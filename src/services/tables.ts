@@ -11,10 +11,10 @@ export interface ITable {
 }
 
 /**
- * It makes an HTTP GET request to the tabless '/' endpoint, and returns the response data
+ * It makes an HTTP GET request to the '/tabless' endpoint, and returns the response data
  * @return {Promise<ITable[]>} A Promise that resolves to an array of ITable objects
  */
 export async function get(): Promise<ITable[]> {
-  const response: AxiosResponse = await http.get("/");
+  const response: AxiosResponse = await http.get("/tabless");
   return response.data as ITable[];
 }
