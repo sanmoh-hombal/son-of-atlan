@@ -37,7 +37,7 @@ function redirect({ key, keyPath }: { key: string; keyPath: string[] }) {
         <borderless-table-outlined />
       </template>
       <template #title>Explorer</template>
-      <div v-if="tablesStore.loading" style="text-align: center">
+      <div v-if="tablesStore.loading" style="text-align: center; padding: 64px 0">
         <a-spin />
       </div>
       <template v-else>
