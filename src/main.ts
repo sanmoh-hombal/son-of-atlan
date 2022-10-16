@@ -5,6 +5,7 @@ import Antd from "ant-design-vue";
 
 import App from "@/App.vue";
 import router from "@router";
+import { useTablesStore } from "@store";
 
 import "ant-design-vue/dist/antd.css";
 
@@ -14,5 +15,8 @@ const app: VueApp<Element> = createApp(App);
 app.use(router);
 app.use(pinia);
 app.use(Antd);
+
+const tablesStore = useTablesStore();
+tablesStore.refreshTables();
 
 app.mount("#app");
