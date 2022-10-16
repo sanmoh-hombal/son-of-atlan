@@ -10,6 +10,7 @@ const resultsLoading = inject(CONSTANTS.RESULTS_LOADING_PROVISION_KEY);
 <template>
   <s-table
     v-if="resultsData && (resultsData as Record<string, any>[]).length > 0"
+    bordered
     sticky
     :scroll="{
       x: '100%',
