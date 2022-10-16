@@ -60,5 +60,6 @@ function parseToStrings(csv: string): string[][] {
  * @return {Record<string, any>[] | Array<string[]>} An array of objects or an array of arrays.
  */
 export function parse(csv: string, toJson: boolean = true): Record<string, any>[] | string[][] {
-  return toJson ? parseToObjects(csv) : parseToStrings(csv);
+  const parsed: Record<string, any>[] | string[][] = toJson ? parseToObjects(csv) : parseToStrings(csv);
+  return parsed.slice(0, -1);
 }
