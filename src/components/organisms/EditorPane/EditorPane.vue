@@ -1,18 +1,32 @@
 <script setup lang="ts">
-import { CaretRightOutlined } from "@ant-design/icons-vue";
+import { CaretRightOutlined, SaveOutlined } from "@ant-design/icons-vue";
+import { inject } from "vue";
 
 import { EditorInput } from "@components/atoms";
+import { CONSTANTS } from "@lib";
 import { useTablesStore, useTableStore } from "@store";
+
+const emit = defineEmits(["run", "save"]);
 
 const tablesStore = useTablesStore();
 const tableStore = useTableStore();
+const resultsLoading = inject<boolean>(CONSTANTS.RESULTS_LOADING_PROVISION_KEY);
+
+const handleRun = (event: MouseEvent) => emit("run", event);
+const handleSave = (event: MouseEvent) => emit("save", event);
 </script>
 
 <template>
-  <a-card title="SQL Editor" :loading="tablesStore.loading">
+  <a-card title="SQL Editor">
     <template #extra>
       <a-space size="middle">
-        <a-button type="primary">
+        <a-button disabled :loading="tablesStore.loading || resultsLoading" @click="handleSave">
+          <template #icon>
+            <save-outlined />
+          </template>
+          Save
+        </a-button>
+        <a-button :loading="tablesStore.loading || resultsLoading" type="primary" @click="handleRun">
           <template #icon>
             <caret-right-outlined />
           </template>
@@ -20,6 +34,6 @@ const tableStore = useTableStore();
         </a-button>
       </a-space>
     </template>
-    <editor-input :disabled="tablesStore.loading" v-model:model-value="tableStore.table!.query" />
+    <editor-input v-model:model-value="tableStore.table!.query" :disabled="tablesStore.loading || resultsLoading" />
   </a-card>
 </template>

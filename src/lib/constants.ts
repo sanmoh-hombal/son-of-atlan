@@ -4,3 +4,6 @@ export const MIRO_URL: string = "https://miro.com/app/board/uXjVPSnY8C4=/?share_
 export const GITHUB_URL: string = "https://github.com/sanmoh-hombal/son-of-atlan";
 
 export const TYPICODE_API_URL: string = "https://my-json-server.typicode.com/sanmoh-hombal/son-of-atlan";
+
+export const RESULTS_DATA_PROVISION_KEY: string = "results:data";
+export const RESULTS_LOADING_PROVISION_KEY: string = "results:loading";
