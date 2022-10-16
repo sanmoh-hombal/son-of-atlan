@@ -4,7 +4,7 @@ import { ExplorerView, HomeView } from "@views";
 
 const routes: RouteRecordRaw[] = [
   { path: "/", name: "home", component: HomeView },
-  { path: "/explorer", name: "explorer", component: ExplorerView },
+  { path: "/explorer/:name", name: "explorer", component: ExplorerView, props: true },
 ];
 
 const router: Router = createRouter({ history: createWebHistory(), routes });
