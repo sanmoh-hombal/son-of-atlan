@@ -17,7 +17,7 @@ const handleSave = (event: MouseEvent) => emit("save", event);
 </script>
 
 <template>
-  <a-card title="SQL Editor">
+  <a-card title="SQL Editor" style="flex: auto; margin-bottom: 12px">
     <template #extra>
       <a-space size="middle">
         <a-button disabled :loading="tablesStore.loading || resultsLoading" @click="handleSave">
