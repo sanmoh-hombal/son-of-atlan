@@ -14,7 +14,7 @@ const resultsLoading = inject(CONSTANTS.RESULTS_LOADING_PROVISION_KEY);
     sticky
     :scroll="{
       x: '100%',
-      y: 649,
+      y: '50vh',
     }"
     :pagination="false"
     :loading="resultsLoading"
