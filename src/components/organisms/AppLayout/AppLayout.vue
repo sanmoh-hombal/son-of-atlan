@@ -9,7 +9,7 @@ import { AppBar, AppSideBar } from "@components/molecules";
       <a-layout-sider>
         <app-side-bar />
       </a-layout-sider>
-      <a-layout-content style="padding: 12px 12px 24px">
+      <a-layout-content style="padding: 12px">
         <slot />
       </a-layout-content>
     </a-layout>
