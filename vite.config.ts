@@ -26,6 +26,7 @@ const config: UserConfigExport = defineConfig({
   },
   server: serverOptions,
   preview: serverOptions,
+  build: { target: "esnext" },
 });
 
 export default config;
