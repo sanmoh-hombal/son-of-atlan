@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { inject } from "vue";
+export interface IResultTableProps {
+  loading?: boolean;
+  data?: Record<string, any>[];
+}
 
-import { CONSTANTS } from "@lib";
-
-const resultsData = inject(CONSTANTS.RESULTS_DATA_PROVISION_KEY);
-const resultsLoading = inject(CONSTANTS.RESULTS_LOADING_PROVISION_KEY);
+const props = defineProps<IResultTableProps>();
 </script>
 
 <template>
   <s-table
-    v-if="resultsData && (resultsData as Record<string, any>[]).length > 0"
+    v-if="props.data && props.data.length > 0"
     bordered
     sticky
     :scroll="{
@@ -17,7 +17,7 @@ const resultsLoading = inject(CONSTANTS.RESULTS_LOADING_PROVISION_KEY);
       y: '50vh',
     }"
     :pagination="false"
-    :loading="resultsLoading"
-    :dataSource="[...(resultsData as Record<string, any>[]).map((result: Record<string, any>, key: number) => ({ key, ...result }))]"
-    :columns="Object.keys([...(resultsData as Record<string, any>[])][0]).map((key: string) => ({ title: key, dataIndex: key, ellipsis: true, key }))" />
+    :loading="props.loading"
+    :dataSource="[...props.data.map((result: Record<string, any>, key: number) => ({ key, ...result }))]"
+    :columns="Object.keys([...props.data][0]).map((key: string) => ({ title: key, dataIndex: key, ellipsis: true, key }))" />
 </template>
