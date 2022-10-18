@@ -24,7 +24,7 @@ const tablesStore = useTablesStore();
               </a-tooltip>
               <a-tooltip>
                 <template #title> Open Table </template>
-                <arrow-right-outlined key="redirect" />
+                <arrow-right-outlined key="redirect" @click="$router.push(`/explorer/${table.name}`)" />
               </a-tooltip>
             </template>
           </a-card>
