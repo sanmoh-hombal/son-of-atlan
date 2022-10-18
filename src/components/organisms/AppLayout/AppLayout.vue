@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import { AppBar, AppSideBar } from "@components/molecules";
-import { useTableStore } from "@store";
-
-const tableStore = useTableStore();
 </script>
 
 <template>
@@ -12,7 +9,7 @@ const tableStore = useTableStore();
       <a-layout-sider>
         <app-side-bar />
       </a-layout-sider>
-      <a-layout-content v-if="tableStore.table && tableStore.table.name" style="padding: 12px">
+      <a-layout-content style="padding: 12px">
         <slot />
       </a-layout-content>
     </a-layout>
