@@ -75,3 +75,19 @@ export function parse(csv: string, toJson: boolean = true): Record<string, any>[
   const parsed: Record<string, any>[] | string[][] = toJson ? parseToObjects(csv) : parseToStrings(csv);
   return parsed.slice(0, -1);
 }
+
+/**
+ * It takes an array of objects and returns a CSV string
+ *
+ * @param {Record<string, any>[]} data - The data to be converted to CSV.
+ * @return {string} A deparsed csv string
+ */
+export function deparse(data: Record<string, any>[]): string {
+  const replacer = (_: string, value: any) => (value === null ? "" : value);
+  const header: string[] = Object.keys(data[0]);
+
+  return [
+    header.join(","),
+    ...data.map((row) => header.map((fieldName) => JSON.stringify(row[fieldName], replacer)).join(",")),
+  ].join(LINE_SEPARATOR);
+}
