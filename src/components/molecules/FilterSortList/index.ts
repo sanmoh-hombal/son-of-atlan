@@ -1,3 +1,3 @@
-import FilterSortList from "@components/organisms/FilterSortList/FilterSortList.vue";
+import FilterSortList from "@components/molecules/FilterSortList/FilterSortList.vue";
 
 export default FilterSortList;

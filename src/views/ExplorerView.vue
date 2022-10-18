@@ -2,7 +2,7 @@
 import { onMounted, provide, ref, watch } from "vue";
 
 import { EditorPane, FiltersPane, ResultPane } from "@components/organisms";
-import { CONSTANTS } from "@lib";
+import { CONSTANTS, TYPES } from "@lib";
 import { ResultsService } from "@services";
 import { useTableStore } from "@store";
 
@@ -13,6 +13,7 @@ export interface IExplorerViewProps {
 const props = defineProps<IExplorerViewProps>();
 const tableStore = useTableStore();
 
+const filterSorts = ref<TYPES.IFilterSortModelValue[]>([{}]);
 const results = ref<Record<string, any>[]>([]);
 const loading = ref<boolean>(false);
 
@@ -35,7 +36,7 @@ watch(
 <template>
   <div style="display: flex; flex-direction: column; height: 100%">
     <editor-pane @run="refresh" />
-    <filters-pane />
+    <filters-pane v-model:model-value="filterSorts" />
     <result-pane />
   </div>
 </template>
