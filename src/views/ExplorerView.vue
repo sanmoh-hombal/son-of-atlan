@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, provide, ref, watch } from "vue";
 
-import { EditorPane, ResultPane } from "@components/organisms";
+import { EditorPane, FiltersPane, ResultPane } from "@components/organisms";
 import { CONSTANTS } from "@lib";
 import { ResultsService } from "@services";
 import { useTableStore } from "@store";
@@ -35,6 +35,7 @@ watch(
 <template>
   <div style="display: flex; flex-direction: column; height: 100%">
     <editor-pane @run="refresh" />
+    <filters-pane />
     <result-pane />
   </div>
 </template>
