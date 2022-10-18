@@ -9,7 +9,7 @@ const resultsLoading = inject<boolean>(CONSTANTS.RESULTS_LOADING_PROVISION_KEY);
 </script>
 
 <template>
-  <a-card style="flex: 30vh" :body-style="{ padding: 0, overflowX: 'scroll' }">
+  <a-card style="flex: 30vh; margin-bottom: 12px" :body-style="{ padding: 0, overflowX: 'scroll' }">
     <result-table :loading="resultsLoading" :data="resultsData" />
   </a-card>
 </template>

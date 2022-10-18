@@ -13,7 +13,7 @@ const onUpdate = (values: TYPES.IFilterSortModelValue[]) => emit("update:modelVa
 </script>
 
 <template>
-  <a-card style="margin-bottom: 12px">
+  <a-card :body-style="{ padding: '12px' }" style="margin-bottom: 12px">
     <filter-sort-list :model-value="props.modelValue" @update:model-value="onUpdate" />
   </a-card>
 </template>
