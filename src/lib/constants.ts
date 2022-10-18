@@ -10,3 +10,13 @@ export const TYPICODE_API_URL: string = "https://my-json-server.typicode.com/san
 
 export const RESULTS_DATA_PROVISION_KEY: string = "results:data";
 export const RESULTS_LOADING_PROVISION_KEY: string = "results:loading";
+
+export const FILTER_EQUALS = "==";
+export const FILTER_NOT_EQUALS = "!=";
+export const FILTER_GREATER_THAN = ">";
+export const FILTER_GREATER_THAN_OR_EQUALS = ">=";
+export const FILTER_LESS_THAN = "<";
+export const FILTER_LESS_THAN_OR_EQUALS = "<=";
+
+export const SORT_ASCENDING = "ascending";
+export const SORT_DESSCENDING = "descending";
