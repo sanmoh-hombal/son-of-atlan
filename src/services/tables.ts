@@ -7,6 +7,7 @@ const http: AxiosInstance = axios.create({ baseURL: CONSTANTS.TYPICODE_API_URL, 
 export interface ITable {
   id: string;
   name: string;
+  description: string;
   query: string;
   data_url: string;
 }
