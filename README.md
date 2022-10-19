@@ -17,7 +17,6 @@ A very simple vue application to demo some UI skills
 - 🔎 [Prism Editor](https://prism-editor.netlify.app) - Syntax Highlighting
 
 - 📦 [SurelyVue Components]([./src/components](https://www.antdv.com/components/overview)) - For virtual scrolling
-- 
 
 - ☁️ Deploy on Vercel, zero-config
 
