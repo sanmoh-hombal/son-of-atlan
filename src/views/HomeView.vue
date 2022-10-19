@@ -1,9 +1,20 @@
 <script setup lang="ts">
-import { ArrowRightOutlined, DownloadOutlined } from "@ant-design/icons-vue";
+import { ArrowRightOutlined, DownloadOutlined, LoadingOutlined } from "@ant-design/icons-vue";
+import { h, ref } from "vue";
 
+import { ResultsService } from "@services";
 import { useTablesStore } from "@store";
 
 const tablesStore = useTablesStore();
+const loading = ref<boolean>(false);
+
+const indicator = h(LoadingOutlined, { style: { fontSize: "12px" }, spin: true });
+
+const download = async (url: string, name: string) => {
+  loading.value = true;
+  ResultsService.download(await ResultsService.get(url), name);
+  loading.value = false;
+};
 </script>
 
 <template>
@@ -20,7 +31,8 @@ const tablesStore = useTablesStore();
             <template #actions>
               <a-tooltip>
                 <template #title> Download </template>
-                <download-outlined key="download" />
+                <a-spin v-if="loading" :indicator="indicator" />
+                <download-outlined v-else key="download" @click="download(table.data_url, table.name)" />
               </a-tooltip>
               <a-tooltip>
                 <template #title> Open Table </template>
