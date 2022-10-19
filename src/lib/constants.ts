@@ -11,12 +11,26 @@ export const TYPICODE_API_URL: string = "https://my-json-server.typicode.com/san
 export const RESULTS_DATA_PROVISION_KEY: string = "results:data";
 export const RESULTS_LOADING_PROVISION_KEY: string = "results:loading";
 
-export const FILTER_EQUALS = "==";
-export const FILTER_NOT_EQUALS = "!=";
-export const FILTER_GREATER_THAN = ">";
-export const FILTER_GREATER_THAN_OR_EQUALS = ">=";
-export const FILTER_LESS_THAN = "<";
-export const FILTER_LESS_THAN_OR_EQUALS = "<=";
+export const FILTER_EQUALS: string = "==";
+export const FILTER_NOT_EQUALS: string = "!=";
+export const FILTER_GREATER_THAN: string = ">";
+export const FILTER_GREATER_THAN_OR_EQUALS: string = ">=";
+export const FILTER_LESS_THAN: string = "<";
+export const FILTER_LESS_THAN_OR_EQUALS: string = "<=";
 
-export const SORT_ASCENDING = "ascending";
-export const SORT_DESSCENDING = "descending";
+export const BASE_FILER_OPTIONS: Record<string, any>[] = [
+  { value: FILTER_EQUALS, label: FILTER_EQUALS },
+  { value: FILTER_NOT_EQUALS, label: FILTER_NOT_EQUALS },
+  { value: FILTER_GREATER_THAN, label: FILTER_GREATER_THAN },
+  { value: FILTER_GREATER_THAN_OR_EQUALS, label: FILTER_GREATER_THAN_OR_EQUALS },
+  { value: FILTER_LESS_THAN, label: FILTER_LESS_THAN },
+  { value: FILTER_LESS_THAN_OR_EQUALS, label: FILTER_LESS_THAN_OR_EQUALS },
+];
+
+export const SORT_ASCENDING: string = "ascending";
+export const SORT_DESSCENDING: string = "descending";
+
+export const BASE_SORT_OPTIONS: Record<string, any>[] = [
+  { value: SORT_ASCENDING, label: SORT_ASCENDING },
+  { value: SORT_DESSCENDING, label: SORT_DESSCENDING },
+];

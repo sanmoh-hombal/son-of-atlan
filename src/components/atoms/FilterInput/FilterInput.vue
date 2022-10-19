@@ -11,21 +11,14 @@ export interface IFilterSortSelect {
 }
 
 const props = defineProps<IFilterSortSelect>();
+const emits = defineEmits(["update:modelValue"]);
+
 const tablesStore = useTablesStore();
 
-const baseOptions = ref<Record<string, any>[]>([
-  { value: CONSTANTS.FILTER_EQUALS, label: CONSTANTS.FILTER_EQUALS },
-  { value: CONSTANTS.FILTER_NOT_EQUALS, label: CONSTANTS.FILTER_NOT_EQUALS },
-  { value: CONSTANTS.FILTER_GREATER_THAN, label: CONSTANTS.FILTER_GREATER_THAN },
-  { value: CONSTANTS.FILTER_GREATER_THAN_OR_EQUALS, label: CONSTANTS.FILTER_GREATER_THAN_OR_EQUALS },
-  { value: CONSTANTS.FILTER_LESS_THAN, label: CONSTANTS.FILTER_LESS_THAN },
-  { value: CONSTANTS.FILTER_LESS_THAN_OR_EQUALS, label: CONSTANTS.FILTER_LESS_THAN_OR_EQUALS },
-]);
-
 const resultsLoading = inject<boolean>(CONSTANTS.RESULTS_LOADING_PROVISION_KEY);
+const baseOptions = ref<Record<string, any>[]>(CONSTANTS.BASE_FILER_OPTIONS);
 
-const emit = defineEmits(["update:modelValue"]);
-const onSelect = (value: string[]) => emit("update:modelValue", value);
+const onSelect = (value: string[]) => emits("update:modelValue", value);
 </script>
 
 <template>

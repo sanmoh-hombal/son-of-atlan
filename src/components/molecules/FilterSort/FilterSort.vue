@@ -8,12 +8,12 @@ export interface IFilterSortProps {
 }
 
 const props = defineProps<IFilterSortProps>();
+const emits = defineEmits(["update:modelValue"]);
 
 const resultsData = inject<Record<string, any>[]>(CONSTANTS.RESULTS_DATA_PROVISION_KEY);
 
-const emit = defineEmits(["update:modelValue"]);
 const onChange = (column?: string, filters?: string[], sort?: string) =>
-  emit("update:modelValue", { column, filters, sort });
+  emits("update:modelValue", { column, filters, sort });
 </script>
 
 <template>

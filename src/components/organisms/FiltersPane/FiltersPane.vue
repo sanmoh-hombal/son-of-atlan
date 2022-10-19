@@ -6,9 +6,9 @@ export interface IFiltersPaneProps {
 }
 
 const props = defineProps<IFiltersPaneProps>();
-const emit = defineEmits(["update:modelValue"]);
+const emits = defineEmits(["update:modelValue"]);
 
-const onUpdate = (values: TYPES.IFilterSortModelValue[]) => emit("update:modelValue", values);
+const onUpdate = (values: TYPES.IFilterSortModelValue[]) => emits("update:modelValue", values);
 </script>
 
 <template>

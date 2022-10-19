@@ -5,14 +5,15 @@ import { inject } from "vue";
 import { CONSTANTS } from "@lib";
 import { useTablesStore, useTableStore } from "@store";
 
-const emit = defineEmits(["run", "save"]);
+const emits = defineEmits(["run", "save"]);
 
 const tablesStore = useTablesStore();
 const tableStore = useTableStore();
+
 const resultsLoading = inject<boolean>(CONSTANTS.RESULTS_LOADING_PROVISION_KEY);
 
-const handleRun = (event: MouseEvent) => emit("run", event);
-const handleSave = (event: MouseEvent) => emit("save", event);
+const handleRun = (event: MouseEvent) => emits("run", event);
+const handleSave = (event: MouseEvent) => emits("save", event);
 </script>
 
 <template>

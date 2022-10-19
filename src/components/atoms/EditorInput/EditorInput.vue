@@ -11,9 +11,9 @@ export interface IEditorInputProps {
 }
 
 const props = defineProps<IEditorInputProps>();
-const emit = defineEmits(["update:modelValue"]);
+const emits = defineEmits(["update:modelValue"]);
 
-const onUpdate = (code: string) => emit("update:modelValue", code);
+const onUpdate = (code: string) => emits("update:modelValue", code);
 const highlighter = (code: string) => highlight(code, languages.sql, "sql");
 </script>
 

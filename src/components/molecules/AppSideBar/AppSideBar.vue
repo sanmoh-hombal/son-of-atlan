@@ -1,8 +1,7 @@
 <script setup lang="ts">
+import { BorderlessTableOutlined, HomeOutlined } from "@ant-design/icons-vue";
 import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
-
-import { BorderlessTableOutlined, HomeOutlined } from "@ant-design/icons-vue";
 
 import { useTablesStore } from "@store";
 
@@ -13,15 +12,13 @@ const tablesStore = useTablesStore();
 const activeItem = computed((): string[] => {
   if (route.name === "home") return ["home"];
   if (route.name === "explorer" && route.params.name) return [route.params.name.toString()];
-
   return [];
 });
 
-/** Redirect using key and keyPaths ingested from a-menu @click event */
-function redirect({ key, keyPath }: { key: string; keyPath: string[] }) {
+const redirect = ({ key, keyPath }: { key: string; keyPath: string[] }) => {
   if (key === "home") router.push("/");
   else router.push(`/${keyPath.join("/")}`);
-}
+};
 </script>
 
 <template>

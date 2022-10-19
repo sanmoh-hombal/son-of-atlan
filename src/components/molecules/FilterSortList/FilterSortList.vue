@@ -8,18 +8,18 @@ export interface IFilterSortListProps {
 }
 
 const props = defineProps<IFilterSortListProps>();
-const emit = defineEmits(["update:modelValue"]);
+const emits = defineEmits(["update:modelValue"]);
 
 const onChange = (filterSort: TYPES.IFilterSortModelValue, index: number) => {
   const arrayCopy: TYPES.IFilterSortModelValue[] = [...props.modelValue];
   arrayCopy[index] = filterSort;
-  emit("update:modelValue", arrayCopy);
+  emits("update:modelValue", arrayCopy);
 };
 
 const onAdd = () => {
   const arrayCopy: TYPES.IFilterSortModelValue[] = [...props.modelValue];
   arrayCopy.push({});
-  emit("update:modelValue", arrayCopy);
+  emits("update:modelValue", arrayCopy);
 };
 </script>
 
