@@ -1,11 +1,10 @@
 import { createRouter, createWebHistory, type Router, type RouteRecordRaw } from "vue-router";
 
 import { useTableStore } from "@store";
-import { ExplorerView, HomeView } from "@views";
 
 const routes: RouteRecordRaw[] = [
-  { path: "/", name: "home", component: HomeView },
-  { path: "/explorer/:name", name: "explorer", component: ExplorerView, props: true },
+  { path: "/", name: "home", component: import("@views/HomeView.vue") },
+  { path: "/explorer/:name", name: "explorer", component: import("@views/ExplorerView.vue"), props: true },
 ];
 
 const router: Router = createRouter({ history: createWebHistory(), routes });

@@ -2,6 +2,8 @@ import path from "node:path";
 import { defineConfig, type ServerOptions, type UserConfigExport } from "vite";
 
 import vue from "@vitejs/plugin-vue";
+import { AntDesignVueResolver as antDesignVueResolver } from "unplugin-vue-components/resolvers";
+import components from "unplugin-vue-components/vite";
 
 const serverOptions: ServerOptions = {
   port: 3000,
@@ -12,7 +14,7 @@ const serverOptions: ServerOptions = {
 };
 
 const config: UserConfigExport = defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), components({ resolvers: [antDesignVueResolver()] })],
   resolve: {
     alias: [
       { find: "@", replacement: path.resolve(__dirname, "/src") },
@@ -27,13 +29,6 @@ const config: UserConfigExport = defineConfig({
   server: serverOptions,
   preview: serverOptions,
   build: { target: "esnext" },
-  css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true,
-      },
-    },
-  },
 });
 
 export default config;
