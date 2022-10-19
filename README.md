@@ -20,6 +20,21 @@ A very simple vue application to demo some UI skills
 
 - ☁️ Deploy on Vercel, zero-config
 
+## Handling "large amount of rows"
+A virtual scrolling table from SurelyVue (<i>trial licence so pls bear with it 🔥</i>) has been added instead of a normal one to handle bigger chunks of data.
+
+Previously the page that used to lag for the orders table (800+ rows, 15 columns) now performs flawlessly. Check it out [Orders Table](https://son-of-atlan.vercel.app/explorer/orders)
+
+## Performance
+Measured using Google Lighthouse
+
+- Initial Specs
+  - First Paint: 1.8s
+  - Performance Insight: 87
+- Post Optimisation
+  - First Paint: 1.0s
+  - Performance Insight: 93 
+
 ## Coding Style
 
 - Use Composition API with [`<script setup>` SFC syntax](https://github.com/vuejs/rfcs/pull/227)
