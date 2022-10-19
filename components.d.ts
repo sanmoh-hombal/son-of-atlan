@@ -10,10 +10,8 @@ declare module "@vue/runtime-core" {
     AButton: typeof import("ant-design-vue/es")["Button"];
     ACard: typeof import("ant-design-vue/es")["Card"];
     ACardMeta: typeof import("ant-design-vue/es")["CardMeta"];
-    ACascader: typeof import("ant-design-vue/es")["Cascader"];
     ACol: typeof import("ant-design-vue/es")["Col"];
     ActionsPane: typeof import("./src/components/organisms/ActionsPane/ActionsPane.vue")["default"];
-    ADivider: typeof import("ant-design-vue/es")["Divider"];
     ALayout: typeof import("ant-design-vue/es")["Layout"];
     ALayoutContent: typeof import("ant-design-vue/es")["LayoutContent"];
     ALayoutSider: typeof import("ant-design-vue/es")["LayoutSider"];
@@ -24,12 +22,10 @@ declare module "@vue/runtime-core" {
     AppLayout: typeof import("./src/components/organisms/AppLayout/AppLayout.vue")["default"];
     AppSideBar: typeof import("./src/components/molecules/AppSideBar/AppSideBar.vue")["default"];
     ARow: typeof import("ant-design-vue/es")["Row"];
-    ASelect: typeof import("ant-design-vue/es")["Select"];
     ASpace: typeof import("ant-design-vue/es")["Space"];
     ASpin: typeof import("ant-design-vue/es")["Spin"];
     ASubMenu: typeof import("ant-design-vue/es")["SubMenu"];
     ATooltip: typeof import("ant-design-vue/es")["Tooltip"];
-    ATypographyText: typeof import("ant-design-vue/es")["TypographyText"];
     ATypographyTitle: typeof import("ant-design-vue/es")["TypographyTitle"];
     EditorInput: typeof import("./src/components/atoms/EditorInput/EditorInput.vue")["default"];
     EditorPane: typeof import("./src/components/organisms/EditorPane/EditorPane.vue")["default"];

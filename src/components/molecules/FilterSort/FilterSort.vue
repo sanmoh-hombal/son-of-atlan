@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { inject } from "vue";
 
-import { FilterInput, FilterSortSelect, SortInput } from "@components/atoms";
 import { CONSTANTS, TYPES } from "@lib";
 
 export interface IFilterSortProps {

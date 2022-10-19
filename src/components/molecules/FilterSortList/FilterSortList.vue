@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { PlusOutlined } from "@ant-design/icons-vue";
 
-import { FilterSort } from "@components/molecules";
 import type { TYPES } from "@lib";
 
 export interface IFilterSortListProps {
@@ -27,7 +26,9 @@ const onAdd = () => {
 <template>
   <a-space>
     <template v-for="(_, index) in props.modelValue" :key="index">
-      <filter-sort :model-value="props.modelValue[index]" @update:model-value="(value) => onChange(value, index)" />
+      <filter-sort
+        :model-value="props.modelValue[index]"
+        @update:model-value="(value: any) => onChange(value, index)" />
       <a-button
         v-if="index + 1 === props.modelValue.length"
         :disabled="

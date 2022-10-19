@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { inject } from "vue";
 
-import { ResultTable } from "@components/atoms";
 import { CONSTANTS } from "@lib";
 
 const resultsData = inject<Record<string, any>[]>(CONSTANTS.RESULTS_DATA_PROVISION_KEY);

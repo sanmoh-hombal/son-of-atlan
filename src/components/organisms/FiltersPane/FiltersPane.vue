@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { FilterSortList } from "@components/molecules";
 import type { TYPES } from "@lib";
 
 export interface IFiltersPaneProps {

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, provide, ref, watch } from "vue";
 
-import { ActionsPane, EditorPane, FiltersPane, ResultPane } from "@components/organisms";
 import { CONSTANTS, TYPES } from "@lib";
 import { ResultsService } from "@services";
 import { useTableStore } from "@store";

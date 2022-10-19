@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { AppBar, AppSideBar } from "@components/molecules";
-</script>
-
 <template>
   <a-layout style="height: 100vh">
     <app-bar />

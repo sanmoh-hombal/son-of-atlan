@@ -2,7 +2,6 @@
 import { CaretRightOutlined, SaveOutlined } from "@ant-design/icons-vue";
 import { inject } from "vue";
 
-import { EditorInput } from "@components/atoms";
 import { CONSTANTS } from "@lib";
 import { useTablesStore, useTableStore } from "@store";
 
