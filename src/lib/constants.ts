@@ -9,6 +9,7 @@ export const SURELY_API_KEY: string =
 export const TYPICODE_API_URL: string = "https://my-json-server.typicode.com/sanmoh-hombal/son-of-atlan";
 
 export const RESULTS_DATA_PROVISION_KEY: string = "results:data";
+export const RESULTS_DURATION_PROVISION_KEY: string = "results:duration";
 export const RESULTS_LOADING_PROVISION_KEY: string = "results:loading";
 
 export const FILTER_EQUALS: string = "==";

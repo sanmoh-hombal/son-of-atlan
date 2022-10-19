@@ -9,12 +9,17 @@ import { useTableStore } from "@store";
 const tablesStore = useTableStore();
 
 const resultsData = inject<Record<string, any>[]>(CONSTANTS.RESULTS_DATA_PROVISION_KEY);
+const resultsDuration = inject<Record<string, any>[]>(CONSTANTS.RESULTS_DURATION_PROVISION_KEY);
 const resultsLoading = inject<boolean>(CONSTANTS.RESULTS_LOADING_PROVISION_KEY);
 </script>
 
 <template>
-  <a-card :body-style="{ display: 'flex', padding: '12px' }">
-    <div style="flex: 1"></div>
+  <a-card :body-style="{ display: 'flex', alignItems: 'center', padding: '12px' }">
+    <div style="flex: 1">
+      <a-typography-text type="secondary">
+        Query Time: {{ resultsData ? resultsDuration + "s" : "Loading" }}
+      </a-typography-text>
+    </div>
     <a-space>
       <a-typography-text type="secondary">
         {{ resultsData ? resultsData.length + " Rows" : "Loading" }}

@@ -14,14 +14,18 @@ const tableStore = useTableStore();
 
 const filterSorts = ref<TYPES.IFilterSortModelValue[]>([{}]);
 const results = ref<Record<string, any>[]>([]);
+const duration = ref<number>();
 const loading = ref<boolean>(false);
 
 provide(CONSTANTS.RESULTS_DATA_PROVISION_KEY, results);
+provide(CONSTANTS.RESULTS_DURATION_PROVISION_KEY, duration);
 provide(CONSTANTS.RESULTS_LOADING_PROVISION_KEY, loading);
 
 const refresh = async () => {
   loading.value = true;
-  results.value = await ResultsService.get(tableStore.table!.data_url);
+  const response = await ResultsService.get(tableStore.table!.data_url);
+  results.value = response.data;
+  duration.value = response.duration;
   loading.value = false;
 };
 

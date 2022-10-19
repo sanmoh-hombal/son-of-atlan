@@ -12,7 +12,7 @@ const indicator = h(LoadingOutlined, { style: { fontSize: "12px" }, spin: true }
 
 const download = async (url: string, name: string) => {
   loading.value = true;
-  ResultsService.download(await ResultsService.get(url), name);
+  ResultsService.download((await ResultsService.get(url)).data, name);
   loading.value = false;
 };
 </script>
